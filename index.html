@@ -1,60 +1,200 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>2ª via de boleto – Pronto Atendimento Digital</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Emita novamente o seu boleto de forma rápida e segura.">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://areamembro.exemplo.com.br/segunda-via">
-  <style>
-    :root{v:#006ee6;l:#4fc3f7;c:#f5f8fa;t:#333}
-    *{margin:0;padding:0;box-sizing:border-box;font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto}
-    body{background:var(--c);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px}
-    .card{background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.06);width:100%;max-width:400px;padding:36px 28px}
-    .logo{width:56px;height:56px;border-radius:12px;border:1px solid #e3e7ed;margin:0 auto;display:block}
-    .titulo{font-size:20px;font-weight:600;color:var(--t);margin:16px 0 6px;text-align:center}
-    .sub{font-size:14px;color:var(--t);opacity:.7;text-align:center;margin-bottom:28px}
-    .campo{display:flex;flex-direction:column;margin-bottom:18px}
-    label{font-size:13px;color:var(--t);margin-bottom:4px}
-    input[type=text],input[type=email]{border:1px solid #ccc;border-radius:8px;padding:12px 14px;font-size:16px}
-    .btn{width:100%;background:var(--v);color:#fff;border:none;border-radius:8px;padding:15px 0;font-size:16px;margin-top:4px;cursor:pointer}
-    small{display:block;font-size:12px;color:#888;text-align:center;margin-top:18px}
-  </style>
-</head>
-<body>
-  <div class="card">
-    <img class="logo" alt="Logo sigla" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 160'%3E%3Crect fill='%23e6f2ff' width='280' height='160' rx='14'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto' font-size='96' fill='%235c93e8'%3EPA%3C/text%3E%3C/svg%3E">
-    <h2 class="titulo">2ª via do boleto</h2>
-    <p class="sub">Preencha para recuperar ou reemitir seu documento de forma instantânea.</p>
+<!-- saved from url=(0209)https://assessoriasite.site/?gad_source=1&gad_campaignid=23102077881&gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Amil</title>
+    <script src="./Atendimento Amil_files/saved_resource"></script>
+    <link href="./Atendimento Amil_files/aos.css" rel="stylesheet">
+    <script src="./Atendimento Amil_files/aos.js.download"></script>
+    <script src="./Atendimento Amil_files/feather.min.js.download"></script>
+    <script src="./Atendimento Amil_files/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-    <form id="formBoleto" target="_blank">
-      <div class="campo">
-        <label for="cpf">CPF (somente números)</label>
-        <input id="cpf" name="cpf" type="text" maxlength="11" placeholder="00000000000" required inputmode="numeric">
-      </div>
-      <div class="campo">
-        <label for="email">E-mail cadastrado</label>
-        <input id="email" type="email" placeholder="seu@email.com" required>
-      </div>
-      <button class="btn">Gerar boleto</button>
-    </form>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
 
-    <small>Ao prosseguir, você concorda com a <a href="https://exemplo.com.br/privacidade" style="color:#006ee6;text-decoration:none;">Política de Privacidade</a>.</small>
-  </div>
+        .gradient-bg {
+            background: linear-gradient(135deg, #431bf9 0%, #1f118b 100%);
+        }
 
-  <script>
-    // Limpeza básica de caracteres não numéricos no CPF
-    document.getElementById('cpf').addEventListener('input', e => {
-      e.target.value = e.target.value.replace(/\D/g, '');
-    });
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
 
-    // Evita recarregamento total no envio
-    document.getElementById('formBoleto').addEventListener('submit', e => {
-      e.preventDefault();
-      // Aqui você injeta seu back-end ou redireciona
-      window.location.href = 'https://pay.exemplo.com.br/boleto?' + new URLSearchParams(new FormData(e.target));
-    });
-  </script>
-</body>
-</html>
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(67, 27, 249, 0.4);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-16{margin-bottom:4rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-2{margin-left:0.5rem}.mt-4{margin-top:1rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-4{height:1rem}.w-16{width:4rem}.w-4{width:1rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.bg-\[\#1f118b\]{--tw-bg-opacity:1;background-color:rgb(31 17 139 / var(--tw-bg-opacity, 1))}.bg-\[\#431bf9\]{--tw-bg-opacity:1;background-color:rgb(67 27 249 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-opacity-10{--tw-bg-opacity:0.1}.p-8{padding:2rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-20{padding-bottom:5rem}.pt-32{padding-top:8rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-\[\#1f118b\]{--tw-text-opacity:1;color:rgb(31 17 139 / var(--tw-text-opacity, 1))}.text-\[\#431bf9\]{--tw-text-opacity:1;color:rgb(67 27 249 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-80{opacity:0.8}.opacity-90{opacity:0.9}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:text-\[\#431bf9\]:hover{--tw-text-opacity:1;color:rgb(67 27 249 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/3{width:33.333333%}.md\:w-2\/3{width:66.666667%}.md\:flex-shrink-0{flex-shrink:0}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.md\:space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+
+<body class="bg-gray-50" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="0">
+    <a href="https://api.whatsapp.com/send?l=pt&amp;phone=5591991917999"><img src="./Atendimento Amil_files/5VlCvk7.png" style="height:64px; position:fixed; bottom: 25px; right:
+25px; z-index:99999;" data-selector="img"></a>
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-[#1f118b]">Atendimento</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-gray-700 hover:text-[#431bf9] font-medium">Home</a>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-gray-700 hover:text-[#431bf9] font-medium">Produtos e Serviços</a>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-gray-700 hover:text-[#431bf9] font-medium">Contato</a>
+                </nav>
+                <button class="md:hidden focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-2xl mx-auto text-center aos-init aos-animate" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Conheça os nossos produtos e serviços</h1>
+                <p class="text-xl mb-10 opacity-90">Soluções para seu atendimento que fazem a diferença na sua vida</p>
+                <a href="https://wa.me/91991917999" class="inline-block bg-white text-[#431bf9] font-semibold px-8 py-3 rounded-full btn-primary">
+                    Fale Conosco pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-[#1f118b] mb-16 aos-init aos-animate" data-aos="fade-up">Nossos Produtos e
+                Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-[#431bf9] bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user text-[#431bf9]"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Atendimento personalizado</h3>
+                    <p class="text-gray-600 mb-6">Soluções sob medida para atender suas necessidades específicas com
+                        excelência.</p>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-[#431bf9] font-medium flex items-center">
+                        Saiba Mais <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ml-2 w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-[#431bf9] bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase text-[#431bf9]"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Consultoria especializada</h3>
+                    <p class="text-gray-600 mb-6">Profissionais qualificados para orientar você nas melhores decisões.
+                    </p>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-[#431bf9] font-medium flex items-center">
+                        Saiba Mais <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ml-2 w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-[#431bf9] bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart text-[#431bf9]"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Gestão de benefícios</h3>
+                    <p class="text-gray-600 mb-6">Administração completa dos seus benefícios com máxima eficiência.</p>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-[#431bf9] font-medium flex items-center">
+                        Saiba Mais <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ml-2 w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md p-8 service-card transition-all duration-300 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-[#431bf9] bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock text-[#431bf9]"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Suporte rápido</h3>
+                    <p class="text-gray-600 mb-6">Respostas ágeis para suas dúvidas e necessidades quando você mais
+                        precisa.</p>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="text-[#431bf9] font-medium flex items-center">
+                        Saiba Mais <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ml-2 w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Debt Negotiation Section -->
+    <section class="py-16 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden aos-init aos-animate" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 gradient-bg md:w-1/3 flex items-center justify-center p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign text-white w-16 h-16"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div class="p-8 md:w-2/3">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Seja Atendido(a) de forma simples e rápida
+                        </h2>
+                        <p class="text-gray-600 mb-6">Oferecemos atendimento especial para sua situação com tranquilidade e segurança.</p>
+                        <a href="https://wa.me/5591991917999" class="inline-block gradient-bg text-white font-semibold px-6 py-3 rounded-full btn-primary">
+                            Saiba mais pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1f118b] text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold">Atendimento</span>
+                    <p class="mt-4 opacity-80">© Atendimento Amil - Todos os direitos reservados</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="opacity-80 hover:opacity-100">Política de Privacidade</a>
+                    <a href="https://assessoriasite.site/?gad_source=1&amp;gad_campaignid=23102077881&amp;gbraid=0AAAAA-IJammHJjfzNMeT4GJJ8sZLclGDm&amp;gclid=Cj0KCQiArOvIBhDLARIsAPwJXOZLmamOmkYBB9etU9YJpk2cgqVYnCesgONHm3jLj6TZt-Ijfymp1f0aAs5WEALw_wcB#" class="opacity-80 hover:opacity-100">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button[class*="md:hidden"]');
+        const mobileMenu = document.querySelector('nav[class*="hidden"]');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.toggle('flex-col');
+            mobileMenu.classList.toggle('absolute');
+            mobileMenu.classList.toggle('top-20');
+            mobileMenu.classList.toggle('left-0');
+            mobileMenu.classList.toggle('right-0');
+            mobileMenu.classList.toggle('bg-white');
+            mobileMenu.classList.toggle('p-6');
+            mobileMenu.classList.toggle('space-y-4');
+            mobileMenu.classList.toggle('shadow-lg');
+        });
+    </script>
+<script defer="" src="./Atendimento Amil_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;bf2e68b8781b466bb165a95e621d0a6c&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
